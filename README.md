@@ -27,4 +27,14 @@ My Portfolio is a personal website designed to present my professional backgroun
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repository-name.git
+   git clone https://github.com/nwindly/nwindly_portfolio.git
+   ```
+   Or Manually download the files in a zip folder by clicking the "Code" button.
+   
+2. Open Visual Studio Code
+   Click on File > Open Folder and select the downloaded folder.
+
+3. Open the Project Locally
+   Find "index.html" and right-click the file. Select "Open with Live Server."
+
+* Or, right-click "index.html" in the downloaded folder and open to your preferred browser. 
