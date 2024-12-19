@@ -1,0 +1,302 @@
+
+/* insert google fonts here 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color:darkblue
+}
+
+ Desktop Styling 
+
+.front {
+    font-weight: bold;
+}
+
+.front:hover {
+    cursor: default;
+}
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    align-items: center;
+    height: 10vh;
+}
+
+.nav-links {
+    list-style: none;
+    gap: 2rem;
+    font-size: 1rem;
+}
+
+Underline Transition for Hovered Links
+
+a {
+    text-decoration: none; 
+    position: relative;
+    color: black;
+  }
+  
+  a::after {
+    content: '';             
+    position: absolute;       
+    bottom: 0;                
+    left: 0;
+    width: 0;                 
+    height: 0.01rem;              
+    background-color: black;  
+    transition: width 0.3s ease-in; 
+  }
+  
+  a:hover::after {
+    width: 100%;
+  }
+
+   Menu w/ Hamburger Icon
+
+#nav-menu {
+    display: none;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 200%;
+    height: 0.01rem;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    background-color: white;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    justify-content: flex-end;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: fit-content;
+}
+
+.hamburger-icon.open span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.open span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #nav-bar {
+        display: none;
+    }
+    #nav-menu {
+        display:flex;
+    }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Poppins;
+    height: 100%;
+}
+
+/*Navigation Bar*/
+
+#nav-bar {
+    width: 100%;
+    padding-top: 3.5vh;
+    padding-bottom: 3.5vh;
+    border-bottom: solid 0.01rem;
+}
+
+@media (max-width: 600px) {
+    #nav-bar {
+        padding-right: 3.5vh;
+        padding-left: 3.5vh;
+    } 
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight:300
+}
+
+#nav-name {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+nav a {
+    text-decoration: none; 
+    position: relative;
+    color: black;
+}
+  
+nav a::after {
+    content: '';             
+    position: absolute;       
+    bottom: 0;                
+    left: 0;
+    width: 0;                 
+    height: 0.15rem;              
+    background-color: white;  
+    transition: width 0.35s ease-in; 
+}
+  
+nav a:hover::after {
+    width: 100%;
+    background: linear-gradient(to right, #ffbd59, #00bf63, #4090eb)
+}
+
+/*Section Styling*/
+
+.bg-container {
+    background-size: cover;
+    width: 100%;
+}
+
+img {
+    cursor: default;
+}
+
+.pfp {
+    position: absolute;
+    width: 20vw;
+    border-radius: 50%;
+    border: 0.01rem dashed black;
+    top: 13vh;
+    right: 5vh;
+}
+
+@media (max-width: 768px) {
+    .pfp {
+        width: 20vw;
+        height: 20vw;
+        top: 13vh;
+        right: 5vh;
+    }
+  }
+
+.greeting-text {
+    position: absolute;
+    top: 17vh;
+    right: 26vw;
+    font-size: 2.5vw;
+
+}
+
+@media (max-width: 768px) {
+    .greeting-text {
+        top: 16vh;
+        right: 27vw;
+        font-size: 2.5vw;
+        width: 8vh;
+  }
+}
+
+/*Footer*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: right;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-content: flex-start;
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    padding-right: 2vw;
+    padding-top: 2vw
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+}
+

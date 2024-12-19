@@ -1,0 +1,297 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Poppins;
+    height: 100%;
+}
+
+/*Navigation Bar*/
+
+#nav-bar {
+    width: 100%;
+    padding-top: 3.5vh;
+    padding-bottom: 3.5vh;
+    border-bottom: solid 0.01rem;
+}
+
+@media (max-width: 600px) {
+    #nav-bar {
+        padding-right: 3.5vh;
+        padding-left: 3.5vh;
+    } 
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight:300
+}
+
+#nav-name {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+nav a {
+    text-decoration: none; 
+    position: relative;
+    color: black;
+}
+  
+nav a::after {
+    content: '';             
+    position: absolute;       
+    bottom: 0;                
+    left: 0;
+    width: 0;                 
+    height: 0.15rem;              
+    background-color: white;  
+    transition: width 0.35s ease-in; 
+}
+  
+nav a:hover::after {
+    width: 100%;
+    background: linear-gradient(to right, #ffbd59, #00bf63, #4090eb)
+}
+
+/*Section Styling*/
+
+.legend {
+    position: absolute;
+    top: 6.25rem; 
+    left: 0.25rem;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.legend p {
+    margin: 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.circle-legend, .star-legend {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+
+.circle-legend {
+    background-color: #0097b2; 
+    border-radius: 50%;
+}
+
+.star-legend {
+    background-color: #EDC951; 
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+#skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 70%;
+}
+
+#skills-title {
+    font-size: 8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+#skills-title span {
+    display: inline-block;
+    animation: bounce 0.5s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+    opacity: 0;
+    cursor: default;
+}
+
+.skill-box {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    background-color: lightgray;
+    border: 1px solid #000;
+    cursor: default;
+    white-space: nowrap;
+    font-size: 1.0rem;
+    font-weight: bold; 
+    width: 9rem; 
+    text-align: center; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+#h {
+    background-color: #804e19;
+    border-color: #804e19;
+    color: #0097b2;
+}
+
+#c {
+    background-color: #ffde59;
+    border-color: #ffde59;
+    color: #ff3131;
+}
+
+#j {
+    background-color: #ffc5e8;
+    border-color: #ffc5e8;
+    color: #00bf63;
+}
+
+#py {
+    background-color: #00bf63;
+    border-color: #00bf63;
+    color: #ffc5e8;
+}
+
+#sc {
+    background-color: #5e17eb;
+    border-color: #5e17eb;
+    color: #ff914d;
+}
+
+#se {
+    background-color: #ff914d;
+    border-color: #ff914d;
+    color: #5e17eb;
+}
+
+#m {
+    background-color: #ff3131;
+    border-color: #ff3131;
+    color: #ffde59;
+}
+
+#n {
+    background-color: #4090eb;
+    border-color: #4090eb;
+    color: #ffbd59;
+}
+
+#pa {
+    background-color: #0097b2;
+    border-color: #0097b2;
+    color: #804e19;
+}
+
+.skill-box:hover {
+    transform: translateY(-0.75rem);
+}
+
+.skill-box.circle {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.skill-box.star {
+    background: #EDC951;
+    height: 200px; /* adjust to control the size  */
+    aspect-ratio: 1;
+    clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+}
+
+@media (max-width: 800px) {
+    .skill-box.circle, .skill-box.star {
+        width: 6rem;
+        height: 6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .skill-box.circle, .skill-box.star {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .skill-box.circle, .skill-box.star {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media (max-width: 500px) {
+    #skills-title {
+        font-size: 3rem; 
+    }
+
+    .skill-box {
+        padding: 0.5rem; 
+        font-size: 0.6rem; 
+        max-width: 100px;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-20%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*Footer*/
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: right;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-content: flex-start;
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    padding-right: 2vw;
+    padding-top: 2vw
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+}
+

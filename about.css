@@ -1,0 +1,182 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Poppins;
+    height: 100%;
+}
+
+/*Navigation Bar*/
+
+#nav-bar {
+    width: 100%;
+    padding-top: 3.5vh;
+    padding-bottom: 3.5vh;
+    border-bottom: solid 0.01rem;
+}
+
+@media (max-width: 600px) {
+    #nav-bar {
+        padding-right: 3.5vh;
+        padding-left: 3.5vh;
+    } 
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight:300
+}
+
+#nav-name {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+nav a {
+    text-decoration: none; 
+    position: relative;
+    color: black;
+}
+  
+nav a::after {
+    content: '';             
+    position: absolute;       
+    bottom: 0;                
+    left: 0;
+    width: 0;                 
+    height: 0.15rem;              
+    background-color: white;  
+    transition: width 0.35s ease-in; 
+}
+  
+nav a:hover::after {
+    width: 100%;
+    background: linear-gradient(to right, #ffbd59, #00bf63, #4090eb)
+}
+
+/*Section Styling*/
+
+body {
+    margin: 0;
+}
+
+#about-header {
+    margin: 1.5rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.75rem;
+}
+
+#about-container {
+    /*display: flex;*/
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 350vh;
+}
+
+.about {
+    position: sticky;
+    width: 90vw;
+    padding: 5vw 5vw 5vh 5vh;
+    margin: 2.5vw;
+    border-radius: 3vw;
+    font-size: 1.1rem;
+    height: 50vh;
+    z-index: 1;
+    transform-origin: top;
+    top: calc(var(--card-offset, 0px)); /*Offset the notecards so they can stack*/
+}
+
+.container-1 {
+    background-color: #ffc5e8;
+    color: #00bf63;
+    --card-offset: 30px;
+}
+
+.container-1 h2 {
+    text-shadow: #059d54 1px 0.5px;
+}
+
+.container-2 {
+    background-color: #ffbd59;
+    color: #4090eb;
+    --card-offset: 60px;
+}
+
+.container-3 {
+    background-color: #4090eb;
+    color: #ffbd59;
+    --card-offset: 90px;
+}
+
+.container-4 {
+    background-color: #00bf63;
+    color: #ffc5e8;
+    --card-offset: 120px;
+}
+
+.container-1, .container-2, .container-3, .container-4 {
+    opacity: 0; /* Start with elements hidden */
+    transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
+}
+
+@media (max-width: 520px) {
+    .about {
+        padding-top: 4vh;
+    }
+}
+
+@media (min-width: 760px) {
+    .about {
+        padding-top: 3.25vh;
+    }
+}
+
+.fade-in {
+    opacity: 1; 
+}
+
+/*Footer*/
+
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: right;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-content: flex-start;
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    padding-right: 2vw;
+    padding-top: 2vw
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+}
+
